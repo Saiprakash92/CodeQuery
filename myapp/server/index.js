@@ -26,7 +26,7 @@ const corsOrigin = {
 };
 // app.use(cors({ origin: true, credentials: true }));
 // app.use(cors(corsOrigin));
-app.options('*', cors())
+// app.options('*', cors())
 // app.use(cors());
 app.get("/", (req, res) => {
   // res.setHeader("Access-Control-Allow-Headers", "X-Requested-With, content-type");
