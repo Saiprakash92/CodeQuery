@@ -9,13 +9,14 @@ import answerRoutes from "./routes/Answers.js";
 
 
 const app = express();
-// const corsOptions = {
-//   origin: 'https://code-query-n687.vercel.app/',
-//   credentials: true,            //access-control-allow-credentials:true
-//   optionSuccessStatus: 200
-// }
-// app.use(cors(corsOptions));
-app.use(cors());
+const corsOptions = {
+  origin: 'https://code-query-n687.vercel.app',
+  credentials: true,            //access-control-allow-credentials:true
+  optionSuccessStatus: 200
+}
+
+app.use(cors(corsOptions));
+
 // dotenv.config();
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
